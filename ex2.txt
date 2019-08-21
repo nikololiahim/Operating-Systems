@@ -1,0 +1,59 @@
+    1  whoami
+    2  hostname
+    3  man whoami
+    4  man man
+    5  man--help
+    6  man --help
+    7  less
+    8  less --help
+    9  less stdout
+   10  pwd
+   11  ls
+   12  cat examples.desktop 
+   13  mkdir labs
+   14  cd labs
+   15  cd
+   16  pwd
+   17  cd
+   18  cd labs
+   19  ..
+   20  cd ..
+   21  cd labs
+   22  touch hellolinux.txt
+   23  cat hellolinux.txt 
+   24  cat >  hellolinux.txt 
+   25  echo > hellolinux.txt 
+   26  gedit hellolinux.txt 
+   27  cat hellolinux.txt 
+   28  mv hellolinux.txt lab1.txt
+   29  pwd
+   30  cat lab1
+   31  cat lab1.txt 
+   32  dir
+   33  touch lab2.txt
+   34  cat > lab2.txt 
+   35  gedit lab2.txt 
+   36  cat lab2.txt
+   37  dir
+   38  mkdir ~/week1
+   39  cd ~/week1
+   40  cd ~
+   41  cd ~/week1
+   42  touch ex1.txt
+   43  cd
+   44  cd ~/week1
+   45  dir
+   46  jobs
+   47  ls /usr/bin | sort -r > ex1.txt
+   48  cat ex1.txt
+   49  gedit ex1.txt
+   50  cat ex1.txt
+   51  ls usr/bin/ | grep "gcc" > ex1.txt
+   52  ls usr/bin/ man grep
+   53  ls usr/bin/ > ex1.txt
+   54  ls /usr/bin
+   55  man grep
+   56  ls /usr/bin | grep "gcc" | sort -r > ex1.txt
+   57  cat ex1.txt
+   58  touch ex2.txt
+   59  history > ex2.txt
