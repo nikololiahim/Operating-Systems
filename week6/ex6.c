@@ -5,23 +5,27 @@
 #include <sys/types.h>
 #include <sys/wait.h>
 
-int main(void) {
+int main() {
 
 	int pipefd[2];
+	if (pipe(pipefd) != 0) {
+		return 0;
+	}
 	
 	int cpid = fork();
 	int cpid2;
+
 	
 	if (cpid == 0) {
 		// child 1	
 		int spid;
 		read(pipefd[0], &spid, sizeof spid);
+		sleep(1);
 		printf("First child: successfully acquired pid of the second child\n");
-		sleep(5);
+		sleep(1);
 		printf("Sending SIGSTOP to the second child...\n");
-		sleep(5);
+		sleep(1);
 		kill(spid, SIGSTOP);
-		sleep(5);
 	}
 	else {
 		cpid2 = fork();
@@ -35,10 +39,12 @@ int main(void) {
 		else {
 			// main process
 			printf("Main process: sending second child's pid to the first child...\n");
+			sleep(1);
 			write(pipefd[1], &cpid2, sizeof cpid2);
-			waitpid(cpid2, NULL, 0);
+			waitpid(cpid2, NULL, WUNTRACED); // WUNTRACED is a flag that terminates the process 											 // upon receiving SIGSTOP
 		}
 	}
 	return 0;
 }
+
 
