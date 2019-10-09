@@ -2,4 +2,11 @@ Exercise 5. What is the difference between a physical
 and a virtual address?
 
 Answer(using my own words):
-A virtual address is an address in virtual address space. Virtual address space is an extension of the physical address space, which in turn represents the entirety of computer's physical RAM. As is the case most of the time, virtual address space is bigger than the available physical space, so the virtual address is mapped into a corresponding physical address by some means. In other words, physical address is something related to a particular piece of hardware, whereas the virtual address is independent of any hardware, it is meant to provide a way for a uniform memory addressing, without the need to know about the intricacies of the underlying hardware.
+A virtual address is an address in virtual address space. Virtual address space is an extension of
+ the physical address space, which in turn represents the entirety of computer's physical RAM. As is
+  the case most of the time, virtual address space is bigger than the available physical space, so
+   the virtual address is mapped into a corresponding physical address by some means. In other words,
+    physical address is something related to a particular piece of hardware, whereas the virtual
+     address is independent of any hardware, it is meant to provide a way for a uniform memory
+      addressing, without the need to know about the intricacies of the underlying hardware.
+      
