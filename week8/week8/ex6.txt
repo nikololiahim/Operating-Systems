@@ -1,0 +1,18 @@
+Exercise 6. Page size = 8 KB, virtual address = 16 bit.
+
+The first x higher order bits of the virtual address represent the index of the page in the page
+ table. The rest 16 - x bits are occupied by the byte offset, which is equal to a number of bits
+  needed to represent the address of a location in a page. The page size is 8 KB, so log2(8*1024) =
+   log2(8) + log2(1024) = 3 + 10 = 13 bits are needed to store the address of a byte in a page.
+   
+
+16 - x = 13
+
+x = 3
+
+Thus, 3 bits are needed to store the page index in the page table. Therefore, the number of pages in
+ the table is 2^3 = 8.
+ 
+
+Answer: 8 entries in a single-level linear page table.
+
