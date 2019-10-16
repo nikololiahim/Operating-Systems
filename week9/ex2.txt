@@ -1,0 +1,11 @@
+For a sequence of 100 identical numbers the hit/miss ratio will be 99/1 (very good).
+For a sequence of 100 consecutive numbers the hit/miss ratio will be 0/100 (very bad).
+10 frames:
+    - Sequence 1 2 3 1 2 3 1 2 3 4 5 6 4 5 6 7 8 9 9 10 10 10 11 yields 12/11
+    - Sequence 1 2 3 1 2 3 1 2 3 4 5 6 4 5 6 7 8 9 9 10 10 10 11 1 yields 12/12,
+          which means that page 1 got swapped out
+    - Sequences 1 2 3 1 2 3 1 2 3 4 5 6 4 5 6 7 8 9 9 10 10 10 11 n, 
+          where n is from 2 to 11 yield 13/11, which means that all the pages n are
+          in the main memory
+    
+    

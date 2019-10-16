@@ -1,0 +1,6 @@
+10 frames:
+    hit/miss ratio - 8/992
+50 frames:
+    hit/miss ratio - 50/950
+100 frames:
+    hit/miss ratio - 93/907
