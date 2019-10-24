@@ -1,0 +1,6 @@
+1) chmod a-x _ex3.txt
+2) chmod uo+rwxXst _ex3.txt
+3) 
+	- chmod 660 _ex3.txt means that both user and the file group can read and write the file, 	but not execute, whereas other users have no permissions for this file
+	- chmod 775 _ex3.txt means that both user and the file group have all the permissions, 	   	whereas other users have permission to only read and execute the file
+	- chmod 77 _ex3.txt means that all the users have all the permissions for the file

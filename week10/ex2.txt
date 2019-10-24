@@ -1,0 +1,7 @@
+#result of cat _ex2.txt, which is supposed to be a link to week01/file.txt
+I'm file.txt!
+#result of command find . -inum 2438
+./_ex2.txt
+./week01/file.txt
+#after executing find <path> –inum inodenumber -exec rm {} \;
+# find . -inum 2438 returned nothing
