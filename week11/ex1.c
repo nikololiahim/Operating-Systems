@@ -13,7 +13,7 @@ int main() {
 	stat("ex1.txt", &file);
 	int fd = open( "ex1.txt", O_RDWR);
 	ftruncate(fd, strlen(to_write));
-	char *content = mmap(NULL, file.st_size ,
+	char *content = mmap(NULL, file.st_size,
 						 PROT_EXEC | PROT_READ |PROT_WRITE,
 						 MAP_SHARED, fd, 0);
 						 

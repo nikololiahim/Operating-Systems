@@ -15,7 +15,7 @@ void program2() {
 }
 
 
-int main(void) {
+int main() {
 
 	int n;
 	scanf("%d", &n);

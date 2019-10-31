@@ -7,7 +7,7 @@ int main(){
 	
 	char buf[20];
 	char* hello = "Hello";
-	setvbuf( stdin, buf, _IOFBF, 20 );
+	setvbuf(stdin, buf, _IOFBF, 20);
 
 	while (*hello != 0) {
 		printf("%c", *hello);

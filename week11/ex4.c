@@ -6,8 +6,8 @@
 #include "string.h"
 
 
-int main(int argc, char const *argv[])
-{
+int main() {
+	
 	struct stat file1;
 	stat("ex1.txt", &file1);
 	int fd1 = open( "ex1.txt", O_RDWR);
@@ -15,13 +15,8 @@ int main(int argc, char const *argv[])
 
 	ftruncate(fd2, file1.st_size);
 
-	char *from = mmap(NULL, file1.st_size ,
-						 PROT_READ,
-						 MAP_SHARED, fd1, 0);
-	char *to = mmap(NULL, file1.st_size ,
-						 PROT_WRITE,
-						 MAP_SHARED, fd2, 0);
-
+	char *src = (char*) mmap(NULL, file1.st_size , PROT_READ, MAP_SHARED, fd1, 0);
+	char *dest = (char*) mmap(NULL, file1.st_size , PROT_WRITE, MAP_SHARED, fd2, 0);
 	memcpy(to, from, file1.st_size);	
 
 
