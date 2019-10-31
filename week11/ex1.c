@@ -14,8 +14,7 @@ int main() {
 	int fd = open( "ex1.txt", O_RDWR);
 	ftruncate(fd, strlen(to_write));
 	char *content = mmap(NULL, file.st_size,
-						 PROT_EXEC | PROT_READ |PROT_WRITE,
-						 MAP_SHARED, fd, 0);
+	PROT_EXEC | PROT_READ |PROT_WRITE, MAP_SHARED, fd, 0);
 						 
 	strcpy(content, str);	
 	close(fd);

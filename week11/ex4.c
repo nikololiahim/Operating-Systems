@@ -10,8 +10,8 @@ int main() {
 	
 	struct stat file1;
 	stat("ex1.txt", &file1);
-	int fd1 = open( "ex1.txt", O_RDWR);
-	int fd2 = open( "ex1.memcpy.txt", O_RDWR);
+	int fd1 = open("ex1.txt", O_RDWR);
+	int fd2 = open("ex1.memcpy.txt", O_RDWR);
 
 	ftruncate(fd2, file1.st_size);
 
