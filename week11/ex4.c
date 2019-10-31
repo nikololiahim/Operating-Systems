@@ -17,7 +17,8 @@ int main() {
 
 	char *src = (char*) mmap(NULL, file1.st_size , PROT_READ, MAP_SHARED, fd1, 0);
 	char *dest = (char*) mmap(NULL, file1.st_size , PROT_WRITE, MAP_SHARED, fd2, 0);
-	memcpy(to, from, file1.st_size);	
+	
+	memcpy(dest, src, file1.st_size);	
 
 
 	close(fd1);
