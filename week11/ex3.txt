@@ -1,0 +1,7 @@
+stdout is line buffered by default, so when we print "Hello" without a new line (program 1),
+the buffer has the "Hello" characters in it by the time printf("\n") is called by the second process,
+so the second process adds the newline to the buffer, prints its contents ("Hello\n") and then flushes it.
+
+In program 2, buffer is flushed immediately after "Hello\n" is printed because newline is present.
+After that, the second process adds newline to the buffer, prints the second newline character,
+then flushes the buffer.
