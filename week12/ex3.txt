@@ -1,0 +1,43 @@
+without O_SYNC:
+	copy_1 (1 byte buffer):
+		real	0m0.041s
+		user	0m0.004s
+		sys	    0m0.037s
+
+
+	copy_32 (32 byte buffer):
+		real	0m0.004s
+		user	0m0.000s
+		sys	    0m0.004s
+
+	copy_1024 (1024 byte buffer):
+		real	0m0.002s
+		user	0m0.002s
+		sys	    0m0.001s
+
+	copy_65536 (65536 byte buffer):
+		real	0m0.002s
+		user	0m0.003s
+		sys	    0m0.000s
+		
+with O_SYNC:
+	sync_copy_1:
+		real	0m0.017s
+		user	0m0.000s
+		sys	    0m0.017s
+	sync_copy_32:
+		real	0m0.004s
+		user	0m0.000s
+		sys	    0m0.003s
+	sync_copy_1024:
+		real	0m0.002s
+		user	0m0.000s
+		sys	    0m0.002s
+
+	sync_copy_65536:
+		real	0m0.003s
+		user	0m0.000s
+		sys	    0m0.002s
+
+As you can see, transferring happens much faster when the buffer is big.
+O_SYNC flag seems to make small-buffer transfers faster, whereas bigger-buffer transfers are slower.
